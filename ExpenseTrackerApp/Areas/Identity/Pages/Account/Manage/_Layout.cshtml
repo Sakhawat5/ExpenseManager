@@ -1,0 +1,134 @@
+﻿@inject UserManager<ApplicationUser> UserManager
+
+@{
+
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
+    {
+        Layout = (string)parentLayout;
+    }
+    else
+    {
+        Layout = "/Areas/Identity/Pages/_Layout.cshtml";
+    }
+
+
+    ApplicationUser user = await UserManager.GetUserAsync(User);
+}
+
+<link href="~/css/main1.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" />
+
+<div class="container" style="padding-top: 92px;">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="right-sideabr">
+                <div class="d-flex justify-content-center h-100 ">
+                    <form enctype="multipart/form-data" onsubmit="UploadFile(this)">
+                        <div class="text-center pt-3">
+                            @if(user.Image =="" || user.Image ==null)
+                            {
+                                //http://ssl.gstatic.com/accounts/ui/avatar_2x.png
+
+                                <img src="~/Img/b2b.png" class="avatar img-circle img-thumbnail" id="img" style="border-radius: 8rem;height: 210px;max-width: 85%;">
+                            }
+                            else {
+                                <img src="~/upload/@user.Image" class="avatar img-circle img-thumbnail" id="img" style="border-radius: 8rem;height: 210px;max-width: 85%;">
+                            }
+                            <input type="file" name="file" id="file" hidden class="text-center center-block file-upload" style="width: 80%;">
+
+                            <label for="file">
+                                <span>Choose a file…</span>
+                                <svg xmlns="#" width="20" height="17" viewBox="0 0 20 17">
+                                    <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path>
+                                </svg>
+                            </label>
+                            <button type="submit" class="btn"><i class="fa fa-floppy-o" style="font-size:20px;color: #0a126d!important;" aria-hidden="true"></i></button>
+
+                        </div>
+                    </form>
+                </div>
+                <span style="display: flex;justify-content: center;font-size: 24px;font-weight: 700;">@user.FirstName @user.LastName</span>
+                <hr />
+                <partial name="_ManageNav" />
+            </div>
+        </div>
+         <div class="col-md-9">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+    <script>
+
+        function UploadFile(form) {
+
+            $.ajax({
+
+                type: "POST",
+
+                url: "/Home/ImageUpload",
+
+                contentType: false,
+
+                processData: false,
+
+                data: new FormData(form),
+
+                async: false,
+
+
+                success: function (message) {
+
+
+
+                },
+
+                error: function (message) {
+
+                    alert("Error Msg: " + message);
+
+                }
+
+            });
+
+        }
+
+    </script>
+}
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+@*
+<script>
+    $(document).ready(function () {
+
+
+        var readURL = function (input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('.avatar').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+
+        $(".file-upload").on('change', function () {
+            readURL(this);
+        });
+    });
+</script>*@

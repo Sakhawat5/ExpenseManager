@@ -1,0 +1,15 @@
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Data\bin\Debug\net5.0\ExpenseTrackerWebApp.Data.deps.json
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Data\bin\Debug\net5.0\ExpenseTrackerWebApp.Data.runtimeconfig.json
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Data\bin\Debug\net5.0\ExpenseTrackerWebApp.Data.runtimeconfig.dev.json
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Data\bin\Debug\net5.0\ExpenseTrackerWebApp.Data.dll
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Data\bin\Debug\net5.0\ref\ExpenseTrackerWebApp.Data.dll
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Data\bin\Debug\net5.0\ExpenseTrackerWebApp.Data.pdb
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Data\obj\Debug\net5.0\ExpenseTrackerWebApp.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Data\obj\Debug\net5.0\ExpenseTrackerWebApp.Data.AssemblyInfoInputs.cache
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Data\obj\Debug\net5.0\ExpenseTrackerWebApp.Data.AssemblyInfo.cs
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Data\obj\Debug\net5.0\ExpenseTrackerWebApp.Data.csproj.CoreCompileInputs.cache
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Data\obj\Debug\net5.0\ExpenseTrackerWebApp.Data.dll
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Data\obj\Debug\net5.0\ref\ExpenseTrackerWebApp.Data.dll
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Data\obj\Debug\net5.0\ExpenseTrackerWebApp.Data.pdb
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Data\obj\Debug\net5.0\ExpenseTrackerWebApp.Data.genruntimeconfig.cache
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Data\obj\Debug\net5.0\ExpenseTrackerWebApp.Data.csproj.AssemblyReference.cache

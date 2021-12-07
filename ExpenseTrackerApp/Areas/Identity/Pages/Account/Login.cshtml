@@ -1,0 +1,93 @@
+﻿@page
+@using Microsoft.AspNetCore.Identity 
+@inject SignInManager<ApplicationUser> SignInManager
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    Layout = "~/Views/Shared/_LoginRegistrationLayout.cshtml";
+}
+
+@*<h1>@ViewData["Title"]</h1>*@
+<div id="wrapper">
+    <div id="login" class="animate form">
+        <form id="account" method="post">
+            <h1>Log in</h1>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Input.Email"></label>
+                <input asp-for="Input.Email" class="form-control" placeholder="Type your valid email" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Password"></label>
+                <input asp-for="Input.Password" class="form-control" placeholder="eg. X8df!90EO" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label asp-for="Input.RememberMe">
+                        <input asp-for="Input.RememberMe" />
+                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p>
+                    <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                </p>
+
+                @*<p>
+                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+                    </p>*@
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" style="width: 98%;padding: 16px;">Log in</button>
+            </div>
+
+            <p class="login button">
+                <a href="http://cookingfoodsworld.blogspot.in/" target="_blank"></a>
+            </p>
+
+            <p class="change_link">
+                Not a member yet ?
+                <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="to_register">Join us</a>
+            </p>
+        </form>
+        <section style="margin-top: 100px;">
+            <h4>Use different service for log in:</h4>
+            <hr />
+            @{
+                var providers = (await SignInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+                if (!providers.Any())
+                {
+                    <div>
+                        <p>
+                            We couldn't find any external provider
+                        </p>
+                    </div>
+                }
+                else
+                {
+                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                        <div style="display: flex;justify-content: center;">
+                            <p>
+                                @foreach (var provider in Model.ExternalLogins)
+                                {
+                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                }
+                            </p>
+                        </div>
+                    </form>
+
+                }
+            }
+        </section>
+    </div>
+
+</div>
+
+@*@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}*@

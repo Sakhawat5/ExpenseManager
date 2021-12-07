@@ -1,0 +1,15 @@
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Framework\bin\Debug\net5.0\ExpenseTrackerWebApp.Framework.deps.json
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Framework\bin\Debug\net5.0\ExpenseTrackerWebApp.Framework.dll
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Framework\bin\Debug\net5.0\ref\ExpenseTrackerWebApp.Framework.dll
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Framework\bin\Debug\net5.0\ExpenseTrackerWebApp.Framework.pdb
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Framework\bin\Debug\net5.0\ExpenseTrackerWebApp.Data.dll
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Framework\bin\Debug\net5.0\ExpenseTrackerWebApp.Data.pdb
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Framework\obj\Debug\net5.0\ExpenseTrackerWebApp.Framework.csproj.AssemblyReference.cache
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Framework\obj\Debug\net5.0\ExpenseTrackerWebApp.Framework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Framework\obj\Debug\net5.0\ExpenseTrackerWebApp.Framework.AssemblyInfoInputs.cache
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Framework\obj\Debug\net5.0\ExpenseTrackerWebApp.Framework.AssemblyInfo.cs
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Framework\obj\Debug\net5.0\ExpenseTrackerWebApp.Framework.csproj.CoreCompileInputs.cache
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Framework\obj\Debug\net5.0\ExpenseTrackerWebApp.Framework.csproj.CopyComplete
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Framework\obj\Debug\net5.0\ExpenseTrackerWebApp.Framework.dll
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Framework\obj\Debug\net5.0\ref\ExpenseTrackerWebApp.Framework.dll
+C:\Users\Sakhawat\source\repos\ExpenseTrackerApp\ExpenseTrackerWebApp.Framework\obj\Debug\net5.0\ExpenseTrackerWebApp.Framework.pdb

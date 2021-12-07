@@ -1,0 +1,124 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_LoginRegistrationLayout.cshtml";
+}
+
+
+ <div id="wrapper" style="width:70%;">
+        <div id="login" class="animate form">
+        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h1>Create a new account.</h1>
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="row">
+                    <div class="col-sm-6 col-6">
+                        <div class="form-group">
+                            <label asp-for="Input.FirstName"></label>
+                            <input asp-for="Input.FirstName" class="form-control" placeholder="Please type your first name" />
+                            <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-6">
+                        <div class="form-group">
+                            <label asp-for="Input.LastName"></label>
+                            <input asp-for="Input.LastName" class="form-control" placeholder="Please type your last name" />
+                            <span asp-validation-for="Input.LastName" class="text-danger"></span>
+                        </div>
+                    </div>
+              
+                    <div class="col-sm-6 col-6">
+                            <label asp-for="Input.Gender"></label>
+                            <div class="form-group">
+                                <select asp-for="Input.Gender" class="form-control">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+
+                                </select>
+                                <span asp-validation-for="Input.Gender" class="text-danger"></span>
+                            </div>
+                    </div>
+                    <div class="col-sm-6 col-6">
+                        <div class="form-group">
+                            <label asp-for="Input.DateOfBirth"></label>
+                            <input asp-for="Input.DateOfBirth" class="form-control" />
+                            <span asp-validation-for="Input.DateOfBirth" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-6">
+                        <div class="form-group">
+                            <label asp-for="Input.City"></label>
+                            <input asp-for="Input.City" class="form-control" placeholder="Please type your city" />
+                            <span asp-validation-for="Input.City" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-12">
+                        <div class="form-group">
+                            <label asp-for="Input.Address"></label>
+                            <textarea asp-for="Input.Address" class="form-control" cols="20" rows="2" placeholder="Please type your address" style="width: 96%;"> </textarea>
+                            <span asp-validation-for="Input.Address" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-6">
+                        <div class="form-group">
+                            <label asp-for="Input.State"></label>
+                            <input asp-for="Input.State" class="form-control" placeholder="Please type your State" />
+                            <span asp-validation-for="Input.State" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-6">
+                        <div class="form-group">
+                            <label asp-for="Input.Email"></label>
+                            <input asp-for="Input.Email" class="form-control" placeholder="Please type your email" />
+                            <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-6">
+                        <div class="form-group">
+                            <label asp-for="Input.Password"></label>
+                            <input asp-for="Input.Password" class="form-control" placeholder="Enter your password" />
+                            <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-6">
+                        <div class="form-group">
+                            <label asp-for="Input.ConfirmPassword"></label>
+                            <input asp-for="Input.ConfirmPassword" class="form-control" placeholder="Enter your Confirm Password" />
+                            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-12">
+                        <div class="form-group">
+                            <p>
+                                <a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl">Sign in account</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-12">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">Register</button>
+                        </div>
+                    </div>
+
+                   
+
+
+                    <p class="login button">
+                        <a href="http://cookingfoodsworld.blogspot.in/" target="_blank"></a>
+                    </p>
+                    <p class="change_link" style="width: 100%;top: 93%;">
+                        Not a member yet ?
+                        <a href="#toregister" class="to_register">Join us</a>
+                    </p>
+                </div>
+
+            
+            
+        </form>
+    </div>
+    
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
